@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-<!-- Copyright: Dit document is eigendom van Platform BISON onder de Stichting Connekt,-->
-<!--            en wordt gepubliceerd onder de Creative Commons Licentie by-nd/3.0/nl, -->
-<!--            zie http://creativecommons.org/licences/by-nd/3.0/nl                   -->
-<!-- Opmerking: XSD is gebaseerd op TMI8 koppelvlak 6                                  -->
-<!-- Versie:  8.1.2  (25-11-2009)                                                      -->
-<!--                                                                                   -->
-<!-- Historie:                                                                         -->
-<!--          0.1: initiele versie (8.1.0.0(e))                                        -->
-<!--          0.2: bijgewerkte versie  (8.1.0.0(f))                                    -->
-<!--          0.3: toestaan toestaan willekeurige berichten volgorde in het dossier    -->
-<!--          0.4: aanpassing nav review                                               -->
-<!--          0.5: aanpassing nav review  (8.1.0.0(j))                                 -->
-<!--          1.0: definitieve versie bij release 8.1.0.0                              -->
-<!--          1.1: definitieve versie bij release 8.1.2.0                              -->
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- Copyright: Dit document is eigendom van Platform BISON onder Samenwerkingsverband DOVA,   -->
+<!--            en wordt gepubliceerd onder de Creative Commons Licentie by-nd/3.0/nl,         -->
+<!--            zie http://creativecommons.org/licences/by-nd/3.0/nl                           -->
+<!-- Opmerking: Dit XSD is gebaseerd op TMI8 koppelvlak 6                                      -->
+<!--                                                                                           -->
+<!-- Versie:  8.1.2a  (januari 2020)                                                           -->
+<!--                                                                                           -->
+<!-- Historie:                                                                                 -->
+<!--          0.1: initiele versie (8.1.0.0(e))                                                -->
+<!--          0.2: bijgewerkte versie  (8.1.0.0(f))                                            -->
+<!--          0.3: toestaan toestaan willekeurige berichten volgorde in het dossier            -->
+<!--          0.4: aanpassing nav review                                                       -->
+<!--          0.5: aanpassing nav review  (8.1.0.0(j))                                         -->
+<!--          1.0: definitieve versie bij release 8.1.0.0                                      -->
+<!--          1.1: definitieve versie bij release 8.1.2.0                                      -->
+<!--          8.1.2a: copyright aangepast                                                      -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tmi8="http://bison.connekt.nl/tmi8/kv6/msg" xmlns:tmi8c="http://bison.connekt.nl/tmi8/kv6/core" targetNamespace="http://bison.connekt.nl/tmi8/kv6/msg" elementFormDefault="qualified">
 	<xs:import namespace="http://bison.connekt.nl/tmi8/kv6/core" schemaLocation="kv6-core.xsd"/>
-	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-	<!-- TMI KV6 messages                                                                  -->
-	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- TMI KV6 messages                                                      -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<xs:element name="VV_TM_PUSH">
 		<xs:complexType>
 			<xs:sequence>
@@ -44,9 +46,9 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-	<!-- Dossiers: KV6posinfo                                                              -->
-	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- Dossiers: KV6posinfo                                                  -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<xs:complexType name="KV6posinfoType">
 		<xs:sequence>
 			<xs:choice>
@@ -68,9 +70,9 @@
 			</xs:sequence>
 		</xs:sequence>
 	</xs:complexType>
-	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-	<!-- POSINFO entities                                                                  -->
-	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- POSINFO entities                                                      -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<xs:complexType name="DELAYType">
 		<xs:sequence>
 			<xs:element name="dataownercode" type="tmi8:dataownercodeType"/>
@@ -264,9 +266,9 @@
 			</xs:sequence>
 		</xs:sequence>
 	</xs:complexType>
-	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-	<!-- Message property types                                                            -->
-	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- Message property types                                                -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<xs:group name="MessageProperties">
 		<xs:sequence>
 			<xs:element name="SubscriberID" type="tmi8:SubscriberIDType"/>
@@ -307,9 +309,9 @@
 	<xs:simpleType name="ResponseErrorType">
 		<xs:restriction base="xs:string"/>
 	</xs:simpleType>
-	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-	<!-- Common entity types                                                               -->
-	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- Common entity types                                                   -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<xs:simpleType name="dataownercodeType">
 		<xs:annotation id="E1">
 			<xs:documentation xml:lang="nl">
